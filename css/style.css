@@ -1,0 +1,283 @@
+/* Змінні кольорів */
+:root {
+  --bg-color: #c9e2ffc2;
+  --text-color: #000000;
+  --primary-color: #007bff;
+  --secondary-bg-color: #ffffff;
+  --secondary-text-color: #ffffff;
+  --hover-color: #003d80;
+  --alt-bg-color: #b2e5ff;
+  --alt-text-color: #333;
+}
+
+/* Темна тема */
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #bb86fc;
+  --secondary-bg-color: #333333;
+  --secondary-text-color: #121212;
+  --hover-color: #3700b3;
+  --alt-bg-color: #1e1e1e;
+  --alt-text-color: #e0e0e0ab;
+}
+
+/* Глобальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  margin-left: 270px;
+}
+
+/* Навігація */
+.nav {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  a {
+    color: var(--secondary-text-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Заголовки */
+h1, h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Таблиці */
+.table-goods {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: var(--secondary-bg-color);
+  .table-goods__tr {
+    .table-goods__tr-td{
+      padding: 15px;
+      border: 1px solid var(--alt-bg-color);
+      text-align: center;
+    }
+    .table-goods__tr-th {
+      background-color: var(--primary-color);
+      color: var(--secondary-text-color);
+      padding: 15px;
+      border: 1px solid var(--alt-bg-color);
+      text-align: center;
+    }
+    &:nth-child(even) {
+      background-color: var(--alt-bg-color);
+    }
+  }
+}
+
+/* Зображення */
+img {
+  border-radius: 5px;
+}
+
+/* Секції новин */
+.news-section {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.news-category {
+  margin: 20px 0;
+}
+
+.news-category h2 {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.news-item {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--alt-bg-color);
+  border-radius: 5px;
+}
+
+.news-item img {
+  float: left;
+  width: 150px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.news-item h3 {
+  margin: 0;
+}
+
+.news-item p {
+  margin: 5px 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Секція смартфонів */
+.smartphones-section {
+  margin: 20px auto;
+  width: 90%;
+}
+
+.smartphone-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--alt-bg-color);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.smartphone-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.smartphone-details {
+  flex-grow: 1;
+}
+
+.smartphone-details h3 {
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+}
+
+.smartphone-details p {
+  margin: 5px 0;
+}
+
+.smartphone-details span {
+  font-weight: bold;
+}
+
+/* Категорії */
+.category {
+  margin: 20px auto;
+  width: 25%;
+  padding: 15px;
+  background-color: var(--alt-bg-color);
+  border: 1px solid var(--alt-bg-color);
+  border-radius: 5px;
+  text-align: left;
+}
+
+.category h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.category p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category ul li {
+  margin: 10px 0;
+}
+
+.category ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.category ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  padding: 15px;
+  background-color: var(--alt-bg-color);
+  border-right: 1px solid var(--alt-bg-color);
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  color: var(--alt-text-color);
+}
+
+.sidebar h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--alt-text-color);
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+/* Відео */
+.video-section {
+  margin-bottom: 40px;
+  padding: 15px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--alt-bg-color);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 315px;
+  max-width: 560px;
+}
+
+/* Контейнер категорій */
+.category-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+#theme-toggle {
+  position: relative; /* Щоб кнопка могла переміщуватися */
+  cursor: pointer;
+}
