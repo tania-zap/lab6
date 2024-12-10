@@ -9,7 +9,7 @@
 </head>
 <body>
     <h2>Опитування</h2>
-    <form id="survey-form" method="POST" action="save_response.php">
+    <form id="survey-form" method="POST">
         <label for="name">Ваше ім'я:</label>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -24,10 +24,23 @@
         <input type="radio" id="poor" name="answers[0]" value="Малокорисний">
         <label for="poor">Малокорисний</label><br><br>
 
-        <label for="suggestions">Ваші пропозиції:</label><br>
-        <textarea id="suggestions" name="answers[1]" rows="4"></textarea><br><br>
+        <p>Які категорії матеріалів вам найбільше цікаві?</p>
+        <input type="checkbox" id="smartphones" name="answers[1][]" value="Смартфони">
+        <label for="smartphones">Смартфони</label><br>
+        <input type="checkbox" id="laptops" name="answers[1][]" value="Ноутбуки">
+        <label for="laptops">Ноутбуки</label><br>
+        <input type="checkbox" id="software" name="answers[1][]" value="Програмне забезпечення">
+        <label for="software">Програмне забезпечення</label><br>
+        <input type="checkbox" id="other" name="answers[1][]" value="Інше">
+        <label for="other">Інше</label><br><br>
+
+        <label for="suggestions">Що б ви хотіли бачити на сайті?</label><br>
+        <textarea id="suggestions" name="answers[2]" rows="4"></textarea><br><br>
 
         <button type="submit">Надіслати</button>
     </form>
+
+    <div id="response"></div> 
+    <script src="js/form.js"></script> 
 </body>
 </html>
